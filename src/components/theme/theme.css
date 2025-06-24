@@ -1,0 +1,39 @@
+.theme-switcher {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 8px 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: bold;
+
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.theme-switcher.light {
+  background-color: var(--bg-light, #eee);
+  color: var(--color-light, #222);
+}
+
+.theme-switcher.dark {
+  background-color: var(--bg-dark, #222);
+  color: var(--color-dark, #eee);
+}
+
+.theme-switcher .icon {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  fill: none;
+}
+
+.theme-switcher.dark .icon {
+  fill: currentColor;
+  stroke: none;
+}
